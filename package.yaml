@@ -1,0 +1,54 @@
+name:                plutus-starter
+version:             0.1.0.0
+license:             BSD3
+author:              "Daniel Firth"
+maintainer:          "dan.firth@homotopic.tech"
+copyright:           "Daniel Firth"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+synopsis:            Short description of your package
+category:            Plutus
+
+description:         Please see the README on GitHub at <https://github.com/githubuser/plutus-stack-template#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- aeson
+- bytestring
+- containers
+- either
+- text
+- plutus-pab
+- plutus-contract
+- plutus-tx-plugin
+- plutus-tx
+- plutus-ledger
+- plutus-ledger-api
+
+library:
+  source-dirs: src
+
+executables:
+  plutus-starter-pab:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - plutus-starter
+
+tests:
+  plutus-starter-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - plutus-starter

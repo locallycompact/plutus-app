@@ -1,0 +1,89 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           plutus-starter
+version:        0.1.0.0
+synopsis:       Short description of your package
+description:    Please see the README on GitHub at <https://github.com/githubuser/plutus-stack-template#readme>
+category:       Plutus
+author:         Daniel Firth
+maintainer:     dan.firth@homotopic.tech
+copyright:      Daniel Firth
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_plutus_starter
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , either
+    , plutus-contract
+    , plutus-ledger
+    , plutus-ledger-api
+    , plutus-pab
+    , plutus-tx
+    , plutus-tx-plugin
+    , text
+  default-language: Haskell2010
+
+executable plutus-starter-pab
+  main-is: Main.hs
+  other-modules:
+      Paths_plutus_starter
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , either
+    , plutus-contract
+    , plutus-ledger
+    , plutus-ledger-api
+    , plutus-pab
+    , plutus-starter
+    , plutus-tx
+    , plutus-tx-plugin
+    , text
+  default-language: Haskell2010
+
+test-suite plutus-starter-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_plutus_starter
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , either
+    , plutus-contract
+    , plutus-ledger
+    , plutus-ledger-api
+    , plutus-pab
+    , plutus-starter
+    , plutus-tx
+    , plutus-tx-plugin
+    , text
+  default-language: Haskell2010
