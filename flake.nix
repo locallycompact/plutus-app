@@ -14,9 +14,9 @@
           (final: prev: {
             # This overlay adds our project to pkgs
             plutus-starter =
+
               final.haskell-nix.project' {
                 src = ./.;
-                compiler-nix-name = "ghc8107";
                 projectFileName = "stack.yaml";
                 modules = [{
                   packages = {
@@ -28,7 +28,6 @@
                       pkgs.lib.mkForce [ [ (import plutus { inherit system; }).pkgs.libsodium-vrf ] ];
                     cardano-crypto-class.components.library.pkgconfig =
                       pkgs.lib.mkForce [ [ (import plutus { inherit system; }).pkgs.libsodium-vrf ] ];
-
                   };
                 }];
                 shell.tools = {
@@ -50,6 +49,6 @@
         flake = pkgs.plutus-starter.flake { };
       in
       flake // {
-        defaultPackage = flake.packages."plutus-starter:exe:plutus-starter";
+        defaultPackage = flake.packages."plutus-starter:exe:plutus-starter-pab";
       });
 }

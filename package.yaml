@@ -14,6 +14,45 @@ category:            Plutus
 
 description:         Please see the README on GitHub at <https://github.com/githubuser/plutus-stack-template#readme>
 
+default-extensions:
+- AllowAmbiguousTypes
+- BangPatterns
+- BinaryLiterals
+- ConstraintKinds
+- DataKinds
+- DefaultSignatures
+- DeriveFoldable
+- DeriveFunctor
+- DeriveGeneric
+- DeriveTraversable
+- DerivingStrategies
+- DoAndIfThenElse
+- EmptyDataDecls
+- ExistentialQuantification
+- FlexibleContexts
+- FlexibleInstances
+- FunctionalDependencies
+- GADTs
+- GeneralizedNewtypeDeriving
+- InstanceSigs
+- KindSignatures
+- LambdaCase
+- MultiParamTypeClasses
+- NoImplicitPrelude
+- OverloadedStrings
+- PatternGuards
+- PolyKinds
+- RankNTypes
+- RecordWildCards
+- ScopedTypeVariables
+- StandaloneDeriving
+- TupleSections
+- TypeApplications
+- TypeFamilies
+- TypeOperators
+- TypeSynonymInstances
+- ViewPatterns
+
 dependencies:
 - base >= 4.7 && < 5
 - aeson
